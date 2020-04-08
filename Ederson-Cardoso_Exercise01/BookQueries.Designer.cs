@@ -1,6 +1,6 @@
 ﻿namespace Ederson_Cardoso_Exercise01
 {
-    partial class Form1
+    partial class BookQueries
     {
         /// <summary>
         /// Required designer variable.

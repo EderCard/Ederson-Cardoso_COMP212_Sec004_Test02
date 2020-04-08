@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ederson_Cardoso_Exercise01
 {
-    public partial class Form1 : Form
+    public partial class BookQueries : Form
     {
-        public Form1()
+        public BookQueries()
         {
             InitializeComponent();
         }
