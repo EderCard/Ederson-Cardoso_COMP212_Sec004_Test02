@@ -305,7 +305,7 @@
             this.highestScorebutton.Name = "highestScorebutton";
             this.highestScorebutton.Size = new System.Drawing.Size(219, 35);
             this.highestScorebutton.TabIndex = 12;
-            this.highestScorebutton.Text = "Highest Score";
+            this.highestScorebutton.Text = "Highest Score Player";
             this.highestScorebutton.UseVisualStyleBackColor = true;
             this.highestScorebutton.Click += new System.EventHandler(this.highestScorebutton_Click);
             // 
