@@ -44,7 +44,7 @@
             "All titles grouped by author name, sorted by author"});
             this.queriesComboBox.Location = new System.Drawing.Point(12, 36);
             this.queriesComboBox.Name = "queriesComboBox";
-            this.queriesComboBox.Size = new System.Drawing.Size(760, 28);
+            this.queriesComboBox.Size = new System.Drawing.Size(748, 28);
             this.queriesComboBox.TabIndex = 1;
             this.queriesComboBox.SelectedIndexChanged += new System.EventHandler(this.queriesComboBox_SelectedIndexChanged);
             // 
@@ -62,11 +62,12 @@
             this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputTextBox.Location = new System.Drawing.Point(12, 95);
             this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
             this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.Size = new System.Drawing.Size(760, 334);
+            this.outputTextBox.Size = new System.Drawing.Size(748, 334);
             this.outputTextBox.TabIndex = 3;
             // 
             // resultLabel
@@ -82,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 441);
+            this.ClientSize = new System.Drawing.Size(772, 441);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.selectQueryLabel);

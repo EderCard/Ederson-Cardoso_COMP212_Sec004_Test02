@@ -42,7 +42,7 @@ namespace Ederson_Cardoso_Exercise02
         /// <param name="e"></param>
         private void searchButton_Click(object sender, EventArgs e)
         {
-            // Giver PlayerID
+            // Given PlayerID
             if (playerIDTextBox.Text != string.Empty && lastNameTextBox.Text == string.Empty)
             {
                 int playerId = int.Parse(playerIDTextBox.Text);
@@ -133,7 +133,7 @@ namespace Ederson_Cardoso_Exercise02
         }
 
         /// <summary>
-        /// This method returns a clearButton_Click event
+        /// This method handle the clearButton_Click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -144,11 +144,21 @@ namespace Ederson_Cardoso_Exercise02
             findPlayer(string.Empty);
         }
 
+        /// <summary>
+        /// This method handle the battingAverageButton_Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void battingAverageButton_Click(object sender, EventArgs e)
         {
             calculateBattingAverage();
         }
 
+        /// <summary>
+        /// This method handle the highestScorebutton_Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void highestScorebutton_Click(object sender, EventArgs e)
         {
             findHighestScorePlayer();
@@ -193,10 +203,9 @@ namespace Ederson_Cardoso_Exercise02
                     select player;
 
                 // show player's name
-                foreach (var p in queryPlayer)
+                foreach (var player in queryPlayer)
                 {
-                    string playerName = p.FirstName + " " + p.LastName;
-                    highestScoreResultLabel.Text = playerName;
+                    highestScoreResultLabel.Text = player.FirstName + " " + player.LastName;
                 }
             }
             catch (Exception ex)

@@ -21,11 +21,22 @@ namespace Ederson_Cardoso_Exercise01
 
         BooksEntities dbContext = new BooksEntities();
 
+        /// <summary>
+        /// This method handle the BookQueries_Load event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookQueries_Load(object sender, EventArgs e)
         {
-            // set the ComboBox to show the default query that
+            // set the ComboBox to show the default query
             queriesComboBox.SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// This method handle the queriesComboBox_SelectedIndexChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void queriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -39,16 +50,17 @@ namespace Ederson_Cardoso_Exercise01
                         var authorsByTitle =
                             from book in dbContext.Titles
                             orderby book.Title1
-                            let cCount = book.Authors.Count()
-                            select new { book.Title1, Count = cCount };
+                            select new { Title = book.Title1, Count = book.Authors.Count() };
 
                         outputTextBox.Clear();
 
-                        outputTextBox.AppendText($"\r{"Title",-110} {"Number of Authors"}");
-                        outputTextBox.AppendText($"\n----------------------------------------------------------------------------------------------------------------------");
+                        outputTextBox.AppendText($"\n-------------------------------------------------------------------------------");
+                        outputTextBox.AppendText($"\r{"Title",-60} {"Number of Authors"}");
+                        outputTextBox.AppendText($"\n-------------------------------------------------------------------------------");
                         foreach (var book in authorsByTitle)
                         {
-                            outputTextBox.AppendText($"\r\n{book.Title1,-110} {book.Count}");
+                            outputTextBox.AppendText($"\r\n{book.Title,-60} {book.Count}");
+                            outputTextBox.AppendText($"\n-------------------------------------------------------------------------------");
                         }
 
                         break;
@@ -70,8 +82,9 @@ namespace Ederson_Cardoso_Exercise01
 
                         outputTextBox.Clear();
 
+                        outputTextBox.AppendText($"\n-------------------------------------------------------------------------------");
                         outputTextBox.AppendText("\rTitles grouped by author name:");
-                        outputTextBox.AppendText($"\n----------------------------------------------------------------------------------------------------------------------");
+                        outputTextBox.AppendText($"\n-------------------------------------------------------------------------------");
 
                         // display titles written by each author, grouped by author
                         foreach (var author in titlesByAuthor)
@@ -88,7 +101,7 @@ namespace Ederson_Cardoso_Exercise01
 
                         break;
                 } // end switch
-            }
+            } // end try
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message, "ERROR",
