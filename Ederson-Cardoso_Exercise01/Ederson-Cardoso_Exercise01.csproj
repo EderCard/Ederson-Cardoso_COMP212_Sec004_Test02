@@ -76,9 +76,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BooksLibrary.Author.datasource" />
-    <None Include="BooksLibrary.BooksEntities.datasource" />
-    <None Include="BooksLibrary.Title.datasource" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
